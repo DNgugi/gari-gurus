@@ -1,6 +1,23 @@
+@import "_breakpoints.scss";
 $primary-color: #000;
 $secondary-color: gold;
 $highlight-color: #fff;
 $heading-font: 'Merriweather', serif;
 $body-font: 'Lato', sans-serif;
+
+html{
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font;
+}
+
+body{
+  margin: 0 auto;
+  font-family: $body-font;
+}
 
