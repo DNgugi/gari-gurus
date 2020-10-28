@@ -1,23 +1,214 @@
 @import "_breakpoints.scss";
-$primary-color: #000;
-$secondary-color: gold;
+$primary-color: #1F1D20;
+$secondary-color: #D68A34;
+$secondary-color-b: #F5BE61;
 $highlight-color: #fff;
+$highlight-color-b: #c1272d;
+$highlight-color-c: #ffcc33;
+$highlight-color-d: #00416a;
 $heading-font: 'Merriweather', serif;
 $body-font: 'Lato', sans-serif;
+$mobile-padding: 2em;
+$desktop-padding: 5em;
 
 html{
   box-sizing: border-box;
   overflow-x: hidden;
   font-size: 1em;
   line-height: 1.75em;
+  height: 100%;
+  
+}
+
+img{
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.btn{
+  border: 1px solid $highlight-color;
+  background-color: $primary-color;
+  color: $highlight-color;
+  padding: .5em 1em;
+  border-radius: 30px;
+
+}
+
+.card{
+  border: 1px solid $highlight-color;
+  background-color: transparent;
+  padding: 1em;
+  margin: .5em;
+  border-radius: 12px;
+
 }
 
 h1,h2,h3,h4,h5,h6{
   font-family: $heading-font;
+  color: $secondary-color;
+
 }
 
 body{
-  margin: 0 auto;
+  margin: 0;
   font-family: $body-font;
+  background-color: $primary-color;
+  color: $highlight-color;
+
+
 }
 
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
+
+/* Header Styles */
+.header{
+  .navbar {
+    font-size: 18px;
+    background-color: $primary-color;
+    padding-bottom: 10px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+
+@include desktop {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        width: 20%;
+        height: auto;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+}
+
+/* Hero Styles */
+.hero{
+  position: relative; //So we can set pseudo background.
+  padding: $mobile-padding;
+  height: 40vh;
+  display: grid;
+  align-items: end;
+
+  &::after{
+      content: " ";
+      background: $primary-color url("/images/background1.jpg");
+      position: absolute;
+      background-size: cover;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-origin: top;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      opacity: 0.6;
+  }
+    
+}
+
+.sidekick{
+  margin: 2em auto;
+  &__title{
+    justify-self: center;
+  }
+  &__card{
+
+    text-align: center;
+  }
+
+  @include tab{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+/* CTA Styles */
+.cta{
+  padding:$desktop-padding $mobile-padding;
+}
+
+/* Footer Styles */
+footer{
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: .5em;
+  margin-top: 1em;
+}

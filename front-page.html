@@ -3,61 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/custom.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
-   <!-- Compiled and minified CSS -->
-   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <title>Gari Gurus | Buy, Sell or Exchange your car.</title>
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Gari Gurus | Buy, Sell, Exchange your car</title>
 </head>
-<body>
+<body class="grid">
   <header class="header">
-
-    <nav class="black" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">GARI GURUS</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Get In Touch</a></li>
-        </ul>
-  
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Get In Touch</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+          <i class="fa fa-bars"></i>
+      </span>
+      <a href="#" class="logo"><img src="/images/logo.jpeg" alt="site logo"></a>
+      <ul class="main-nav" id="js-menu">
+          <li>
+              <a href="#" class="nav-links">Home</a>
+          </li>
+          
+          <li>
+              <a href="#" class="nav-links">About Us</a>
+          </li>
+          <li>
+              <a href="#" class="nav-links">Contact Us</a>
+          </li>
+          </ul>
+  </nav>
   </header>
   <main>
-
     <section class="hero">
-      <p class="hero-text">Let us help you <br>
-      BUY, SELL, or EXCHANGE <br>
-    your car TODAY!</p>
-    <button class="hero-btn">Get Started</button>
-    <button class="hero-btn">Learn More</button>
+       <div class="container">
+        <h1>Let us help you buy, sell or exchange your ride</h1>
+        <span class="btn">Get in touch</span>
+       </div>
     </section>
+    <section class="sidekick grid">
+      <!--<h1 class="sidekick__title">Why Us</h1>-->
+      <div class="card sidekick__card">
+        <h1><i class="fa fa-fire"></i></h1>
+        <h3>Hot Deals</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, distinctio. Dolor labore eos nulla tenetur! Consequuntur ut non animi unde!</p>
+      </div>
+      <div class="card sidekick__card">
+        <h1><i class="fa fa-folder"></i></h1>
 
-    <section class="why-us">
-     
+        <h3>Everything together</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, distinctio. Dolor labore eos nulla tenetur! Consequuntur ut non animi unde!</p>
+      </div>
+      <div class="card sidekick__card">
+        <h1><i class="fa fa-globe"></i></h1>
+
+        <h3>Wordlwide Search</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, distinctio. Dolor labore eos nulla tenetur! Consequuntur ut non animi unde!</p>
+      </div>
+      <div class="card sidekick__card">
+        <h1><i class="fa fa-handshake-o"></i></h1>
+
+        <h3>United </h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, distinctio. Dolor labore eos nulla tenetur! Consequuntur ut non animi unde!</p>
+      </div>
+
     </section>
-    <section class="team"></section>
-    <section class="testimonials"></section>
-    <section class="cta"></section>
+    <section class="cta container">
+      <h1>Get started choosing a car from our catalogue.</h1>
+       <span class="btn">Take me there</span>
+    </section>
   </main>
   <footer>
-    <section class="footer-widgets"></section>
-    <section class="footer-credits">
-      <p>Gari Gurus. All rights reserved. &copy; 2020.</p>
-    </section>
-  </footer> 
-  
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/init.js"></script>
+    <div class="footer__credits">
+      <p>Gari Gurus &copy; 2020.  Built by <a href="http://teambidii.co.ke" target="_blank">Team Bidii Consulting</a></p>
+    </div>
+  </footer>
+  <script src="/js/init.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
-(function($){
-  $(function(){
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
 
-    $('.sidenav').sidenav();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('active');
+});
