@@ -69,9 +69,17 @@ body{
   display: grid;
 }
 
-.hidden{
-  display: none;
+a:link{
+    color: $secondary-color;
+    text-decoration: underline;
+    
+    &:hover{
+        color: $highlight-color;
+    }
 }
+
+a:visited {color: $secondary-color}
+a:active{color:$highlight-color}
 
 
 /* Header Styles */
@@ -85,7 +93,7 @@ body{
     display: none;
 }
 
-.nav-links,
+.menu-item a,
 .logo {
     text-decoration: none;
     color: $highlight-color;
@@ -120,6 +128,7 @@ body{
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
+        border-bottom: 1px dotted $secondary-color;
         align-items: center;
     }
 
@@ -134,12 +143,13 @@ body{
         margin: 0;
     }
 
-    .nav-links {
+    .menu-item a{
         margin-left: 40px;
     }
 
     .logo {
         width: 20%;
+        padding-left: 1em;
     }
 
     .navbar-toggle {
@@ -161,6 +171,11 @@ body{
   display: grid;
   align-items: end;
 
+  a{
+    color: $highlight-color;
+    text-decoration: none;
+  }
+
   h1{
     color: $highlight-color;
     font-size: 1.5em;
@@ -169,7 +184,6 @@ body{
 
   &::after{
       content: " ";
-      background: $primary-color url("/images/background1.jpg");
       position: absolute;
       background-size: cover;
       height: 100%;
@@ -205,14 +219,19 @@ body{
 /* CTA Styles */
 .cta{
   padding:$desktop-padding $mobile-padding;
+  a{
+    color: $highlight-color;
+    text-decoration: none;
+  }
 }
 
 /* Footer Styles */
-footer{
+.footer{
   background-color: $secondary-color;
   color: $primary-color;
   padding: .5em;
   margin-top: 1em;
+  text-align: center;
 
   a{
     color: $highlight-color;
